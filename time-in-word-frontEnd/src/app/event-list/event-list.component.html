@@ -9,7 +9,7 @@
             <th>eventName</th>
             <th>location</th>
             <th>date</th>
-            <th>Date</th>
+            <th>time</th>
           </tr>
         </thead>
         <tbody>
@@ -17,7 +17,11 @@
             <td>{{event.eventName}}</td>
             <td>{{event.location}}</td>
             <td>{{event.date}}</td>
-            <td>{{event.Date}}</td>
+            <td>{{event.hour}}:{{event.minute}}</td>
+            <td>
+              <button (click)="deleteEvent(event.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateEvent(event.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            </td>
           </tr>
         </tbody>
       </table>

@@ -12,6 +12,8 @@ export class CreateEventComponent implements OnInit {
 
   event: Event = new Event();
   submitted = false;
+  hours = 12;
+  mins = 59;
 
   constructor(private eventService: EventServiceService,private router: Router) { }
 
@@ -41,5 +43,14 @@ export class CreateEventComponent implements OnInit {
   gotoList() {
     this.router.navigate(['/events']);
   }
+
+  checkNumber(hourInput:number,minInput){
+    if(hourInput>12 || minInput<0 || minInput>59){
+      alert("retype time please");
+    }
+    this.submitted = false;
+  }
+
+
 
 }

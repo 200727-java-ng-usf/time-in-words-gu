@@ -24,4 +24,17 @@ export class EventListComponent implements OnInit {
     this.events = this.eventService.getEventList();
   }
 
+  deleteEvent(id: number) {
+    this.eventService.deleteEvent(id)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.loadData();
+        },
+        error => console.log(error));
+  }
+  updateEvent(id: number){
+    this.router.navigate(['update', id]);
+  }
+
 }

@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { EventListComponent } from './event-list/event-list.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateEventComponent,
-    EventListComponent
+    EventListComponent,
+    UpdateEventComponent
   ],
   imports: [
     BrowserModule,
