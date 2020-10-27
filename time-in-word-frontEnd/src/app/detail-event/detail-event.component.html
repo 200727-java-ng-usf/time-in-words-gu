@@ -1,0 +1,22 @@
+<h2>Event Details</h2> 
+
+<hr/>
+<div *ngIf="event">
+  <div>
+    <label><b>Event Name: </b></label> {{event.eventName}}
+  </div>
+  <div>
+    <label><b>location Name: </b></label> {{event.location}}
+  </div>
+  <div>
+    <label><b>Date: </b></label> {{event.date}}
+  </div>  
+
+  <div>
+    <label><b>Time: </b></label> {{printWords(event.hour,event.minute)}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to DashBoard</button><br>

@@ -3,13 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import {CreateEventComponent} from '../app/create-event/create-event.component';
 import {EventListComponent} from '../app/event-list/event-list.component';
-import {UpdateEventComponent} from '../app/update-event/update-event.component'
+import {UpdateEventComponent} from '../app/update-event/update-event.component';
+import {DetailEventComponent} from '../app/detail-event/detail-event.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'events', pathMatch: 'full' },
   { path: 'events', component: EventListComponent },
   { path: 'add', component: CreateEventComponent },
+  { path: 'details/:id', component: DetailEventComponent },
   { path: 'update/:id', component: UpdateEventComponent }
 ];
 

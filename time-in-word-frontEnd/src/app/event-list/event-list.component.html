@@ -6,6 +6,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
+           
             <th>eventName</th>
             <th>location</th>
             <th>date</th>
@@ -14,7 +15,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let event of events | async">
-            <td>{{event.eventName}}</td>
+            <button (click)="eventDetails(event.id)" class="btn btn btn-link"><td>{{event.eventName}}</td></button>
             <td>{{event.location}}</td>
             <td>{{event.date}}</td>
             <td>{{event.hour}}:{{event.minute}}</td>

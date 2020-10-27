@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CreateEventComponent } from './create-event/create-event.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
+import { DetailEventComponent } from './detail-event/detail-event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateEventComponent,
     EventListComponent,
-    UpdateEventComponent
+    UpdateEventComponent,
+    DetailEventComponent
   ],
   imports: [
     BrowserModule,

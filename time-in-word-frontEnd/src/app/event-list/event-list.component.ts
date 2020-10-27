@@ -3,6 +3,7 @@ import { Observable } from "rxjs";
 import { Router } from '@angular/router';
 import { EventServiceService } from '../event-service.service';
 import { Event} from '../event';
+import {DetailEventComponent} from '../detail-event/detail-event.component'
 
 @Component({
   selector: 'app-event-list',
@@ -35,6 +36,10 @@ export class EventListComponent implements OnInit {
   }
   updateEvent(id: number){
     this.router.navigate(['update', id]);
+  }
+
+  eventDetails(id: number){
+    this.router.navigate(['details', id]);
   }
 
 }
